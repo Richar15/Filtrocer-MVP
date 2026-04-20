@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Fondo blanco redondeado -->
+  <rect x="0" y="0" width="200" height="200" fill="#ffffff" rx="50"/>
+  
+  <!-- Borde azul -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#0077B6" stroke-width="8"/>
+  
+  <!-- Gota de agua (símbolo) -->
+  <g transform="translate(100, 70)">
+    <path d="M 0,-30 C -15,-15 -20,5 -20,15 C -20,30 -10,40 0,40 C 10,40 20,30 20,15 C 20,5 15,-15 0,-30 Z" fill="#00B4D8"/>
+  </g>
+  
+  <!-- Línea ondulada para representar agua -->
+  <path d="M 50,110 Q 60,105 70,110 T 90,110 T 110,110 T 130,110 T 150,110" stroke="#0077B6" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M 50,125 Q 60,120 70,125 T 90,125 T 110,125 T 130,125 T 150,125" stroke="#0077B6" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>
