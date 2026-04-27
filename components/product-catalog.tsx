@@ -54,20 +54,52 @@ export default function ProductCatalog() {
     <section className="py-12 px-4" style={{ backgroundColor: 'rgb(248, 250, 252)' }}>
       <div className="max-w-7xl mx-auto">
         {/* Breadcrumb / Navegación */}
-        <div className="mb-8 flex items-center gap-2">
-          <a 
-            href="/" 
-            className="text-sm font-semibold transition-all hover:text-blue-600" 
-            style={{ color: 'rgb(0, 119, 182)' }}
+        <div className="mb-10 flex items-center gap-4 flex-wrap">
+          <a
+            href="/"
+            className="group flex items-center gap-2 px-6 py-3 rounded-2xl font-bold text-base transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            style={{
+              background: 'linear-gradient(135deg, rgb(0, 119, 182), rgb(0, 96, 150))',
+              color: 'white',
+              boxShadow: '0 6px 20px rgba(0, 119, 182, 0.35)',
+            }}
+            onMouseEnter={e => {
+              (e.currentTarget as HTMLElement).style.boxShadow = '0 10px 30px rgba(0, 119, 182, 0.5)';
+              (e.currentTarget as HTMLElement).style.background = 'linear-gradient(135deg, rgb(2, 96, 145), rgb(0, 75, 120))';
+            }}
+            onMouseLeave={e => {
+              (e.currentTarget as HTMLElement).style.boxShadow = '0 6px 20px rgba(0, 119, 182, 0.35)';
+              (e.currentTarget as HTMLElement).style.background = 'linear-gradient(135deg, rgb(0, 119, 182), rgb(0, 96, 150))';
+            }}
           >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
             Inicio
           </a>
-          <svg className="w-4 h-4" style={{ color: 'rgb(100, 116, 139)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-          <span className="text-sm font-semibold" style={{ color: 'rgb(15, 23, 42)' }}>
+
+          {/* Separador animado */}
+          <div className="flex items-center gap-1">
+            <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'rgb(0, 119, 182)', opacity: 0.4 }} />
+            <svg className="w-5 h-5" style={{ color: 'rgb(0, 119, 182)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+            </svg>
+            <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'rgb(0, 119, 182)', opacity: 0.4 }} />
+          </div>
+
+          <div
+            className="flex items-center gap-2 px-6 py-3 rounded-2xl font-bold text-base"
+            style={{
+              background: 'linear-gradient(135deg, rgba(0, 119, 182, 0.12), rgba(0, 119, 182, 0.06))',
+              color: 'rgb(0, 119, 182)',
+              border: '2px solid rgba(0, 119, 182, 0.3)',
+            }}
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+            </svg>
             Catálogo
-          </span>
+          </div>
         </div>
 
         {/* Header */}
@@ -228,22 +260,7 @@ export default function ProductCatalog() {
             </a>
           </div>
 
-          {/* Botón Volver a Inicio */}
-          <div className="mt-16 pt-12 border-t" style={{ borderColor: 'rgba(0, 0, 0, 0.05)' }}>
-            <div className="text-center">
-              <a
-                href="/"
-                className="inline-block px-8 py-4 rounded-xl font-semibold text-white transition-all duration-300 hover:scale-105"
-                style={{
-                  backgroundColor: 'rgb(0, 119, 182)'
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgb(2, 96, 145)'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgb(0, 119, 182)'}
-              >
-                ← Volver a Inicio
-              </a>
-            </div>
-          </div>
+
           </>
         )}
       </div>
