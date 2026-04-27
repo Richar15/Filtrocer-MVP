@@ -20,6 +20,12 @@ export default function FiltrocerPage() {
         </div>
         <div className="flex items-center gap-2">
           <a
+            href="/catalogo"
+            className="hidden sm:flex items-center gap-2 px-4 py-2.5 text-[#0077B6] bg-[#CAF0F8] rounded-full hover:bg-[#00B4D8] hover:text-white hover:scale-105 transition-all text-sm font-semibold"
+          >
+            Catálogo
+          </a>
+          <a
             href="https://www.facebook.com/filtrocer/"
             target="_blank"
             rel="noopener noreferrer"
