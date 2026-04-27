@@ -21,9 +21,16 @@ export default function FiltrocerPage() {
         <div className="flex items-center gap-2">
           <a
             href="/catalogo"
-            className="hidden sm:flex items-center gap-2 px-4 py-2.5 text-[#0077B6] bg-[#CAF0F8] rounded-full hover:bg-[#00B4D8] hover:text-white hover:scale-105 transition-all text-sm font-semibold"
+            className="flex items-center gap-2 px-4 py-2.5 text-white rounded-full hover:scale-105 transition-all text-sm font-semibold"
+            style={{
+              background: 'linear-gradient(135deg, #0077B6, #005a8e)',
+              boxShadow: '0 4px 14px rgba(0, 119, 182, 0.4)',
+            }}
           >
-            Catálogo
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+            </svg>
+            <span>Catálogo</span>
           </a>
           <a
             href="https://www.facebook.com/filtrocer/"
@@ -154,15 +161,34 @@ export default function FiltrocerPage() {
             <h3 className="text-lg sm:text-xl font-bold text-[#0077B6] mb-6 text-center">Algunos de nuestros equipos</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4">
               {[1, 2, 3, 4, 5].map((num) => (
-                <div key={num} className="relative aspect-square rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform">
+                <a 
+                  key={num} 
+                  href="/catalogo" 
+                  className="relative aspect-square rounded-2xl overflow-hidden shadow-lg hover:scale-105 hover:shadow-xl transition-all cursor-pointer block group"
+                >
                   <Image
                     src={`/${num}.png`}
                     alt={`Purificador modelo ${num}`}
                     fill
-                    className="object-cover"
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                </div>
+                </a>
               ))}
+            </div>
+            
+            <div className="mt-10 text-center">
+              <a
+                href="/catalogo"
+                className="inline-flex items-center gap-2 px-8 py-3.5 text-white rounded-full transition-all duration-300 hover:scale-105 font-bold text-base shadow-md hover:shadow-xl group"
+                style={{
+                  background: 'linear-gradient(135deg, #0077B6, #005a8e)',
+                }}
+              >
+                <span>Ver catálogo completo</span>
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
             </div>
           </div>
         </div>

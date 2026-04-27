@@ -10,7 +10,7 @@ export async function POST(request: NextRequest) {
 
     if (!adminUsername || !adminPassword) {
       return NextResponse.json(
-        { error: 'Admin credentials not configured' },
+        { error: 'Las credenciales de administrador no están configuradas' },
         { status: 500 }
       );
     }
@@ -36,12 +36,12 @@ export async function POST(request: NextRequest) {
     }
 
     return NextResponse.json(
-      { error: 'Invalid credentials' },
+      { error: 'Usuario o contraseña incorrectos' },
       { status: 401 }
     );
   } catch (error) {
     return NextResponse.json(
-      { error: 'Internal server error' },
+      { error: 'Error interno del servidor. Intenta de nuevo.' },
       { status: 500 }
     );
   }
