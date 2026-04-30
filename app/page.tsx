@@ -194,101 +194,12 @@ export default function FiltrocerPage() {
         </div>
       </section>
 
-      {/* SECCIÓN 4: CIERRE / CTA */}
-      <section className="px-4 md:px-8 py-12 md:py-16 bg-gradient-to-r from-[#0077B6] to-[#00B4D8] text-white">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3">
-            Agua pura empieza hoy
-          </h2>
-          <p className="text-base sm:text-lg mb-8 opacity-95 max-w-xl mx-auto">
-            Escribenos por WhatsApp. Te asesoramos sin costo sobre el equipo ideal.
-          </p>
-          <a
-            href="https://wa.me/573116835639"
-            className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-white text-[#0077B6] font-bold rounded-xl text-base sm:text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
-          >
-            Consultar ahora
-          </a>
-        </div>
-      </section>
 
-      {/* SECCIÓN 5: RESEÑAS */}
-      <section className="px-4 md:px-8 py-12 md:py-16 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-[#0077B6] mb-2">
-            Lo que dicen nuestros clientes
-          </h2>
-          <p className="text-center text-gray-600 mb-10 md:mb-12 text-sm sm:text-base">
-            Experiencias reales de quienes ya confían en nosotros
-          </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            {/* Reseña 1 */}
-            <div className="p-6 sm:p-8 bg-[#CAF0F8] rounded-2xl border-l-4 border-[#0077B6]">
-              <div className="flex items-center gap-1 mb-3">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-yellow-500 text-lg">★</span>
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 text-sm sm:text-base leading-relaxed">
-                La instalación fue rápida y sin desorden. El agua cambió notablemente en sabor y calidad. Recomiendo totalmente el servicio.
-              </p>
-              <p className="font-semibold text-gray-800 text-sm">María García</p>
-            </div>
 
-            {/* Reseña 2 */}
-            <div className="p-6 sm:p-8 bg-[#CAF0F8] rounded-2xl border-l-4 border-[#0077B6]">
-              <div className="flex items-center gap-1 mb-3">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-yellow-500 text-lg">★</span>
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 text-sm sm:text-base leading-relaxed">
-                Excelente atención. El equipo funciona perfecto. Financiamiento sin complicaciones y muy accesible.
-              </p>
-              <p className="font-semibold text-gray-800 text-sm">Carlos López</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECCIÓN 6: PREGUNTAS FRECUENTES */}
-      <section className="px-4 md:px-8 py-12 md:py-16 bg-[#f8fdff]">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-[#0077B6] mb-10 md:mb-12">
-            Preguntas frecuentes
-          </h2>
-
-          <div className="space-y-4 md:space-y-6">
-            {/* Pregunta 1 */}
-            <div className="p-5 sm:p-6 bg-white rounded-2xl shadow-sm border-l-4 border-[#00B4D8]">
-              <h3 className="font-bold text-gray-800 text-base sm:text-lg mb-2 md:mb-3">¿Es para mí este servicio?</h3>
-              <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                Sí. Si quieres agua segura en casa o negocio, sin preocupaciones por calidad o contaminación. Tenemos opciones para diferentes espacios y presupuestos. Asesoramos sin costo.
-              </p>
-            </div>
-
-            {/* Pregunta 2 */}
-            <div className="p-5 sm:p-6 bg-white rounded-2xl shadow-sm border-l-4 border-[#00B4D8]">
-              <h3 className="font-bold text-gray-800 text-base sm:text-lg mb-2 md:mb-3">¿Cómo empezamos?</h3>
-              <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                Contactanos por WhatsApp. Nos cuentas tus necesidades. Hacemos propuesta sin obligación. Si aceptas, agenda instalación. Todo rápido y simple.
-              </p>
-            </div>
-
-            {/* Pregunta 3 */}
-            <div className="p-5 sm:p-6 bg-white rounded-2xl shadow-sm border-l-4 border-[#00B4D8]">
-              <h3 className="font-bold text-gray-800 text-base sm:text-lg mb-2 md:mb-3">¿Y si tengo dudas con el equipo?</h3>
-              <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                Tenemos garantía un año. Soporte técnico disponible. Mantenimiento y repuestos sin problema. Tu equipo funcionando siempre en óptimas condiciones.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Footer */}
-      <footer className="px-4 md:px-8 py-6 md:py-8 bg-gradient-to-r from-[#0077B6] to-[#00B4D8] text-white">
+      <footer className="px-4 md:px-8 py-10 md:py-12 bg-[#0A2540] text-gray-300">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mb-4">
             {/* Ubicación */}

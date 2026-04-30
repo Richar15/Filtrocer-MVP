@@ -402,11 +402,15 @@ export default function AdminPanel() {
                 id="description"
                 value={formData.description}
                 onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                placeholder="Describe el producto brevemente..."
+                placeholder="Describe el producto... (máx 500 caracteres)"
                 required
+                maxLength={500}
                 className="rounded-xl text-sm border-gray-200 resize-none"
-                rows={3}
+                rows={4}
               />
+              <p className="text-xs text-gray-400 mt-1 text-right">
+                {formData.description.length}/500
+              </p>
             </div>
 
             <div className="space-y-1.5">
