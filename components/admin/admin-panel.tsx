@@ -1,6 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+
+const API_URL = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:3001';
 import { useRouter } from 'next/navigation';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -59,7 +61,7 @@ export default function AdminPanel() {
   const fetchProducts = async () => {
     try {
       setLoading(true);
-      const response = await fetch('/api/products');
+      const response = await fetch(`${API_URL}/api/products`, { credentials: 'include' });
       if (response.ok) {
         const data = await response.json();
         setProducts(data);
@@ -72,7 +74,7 @@ export default function AdminPanel() {
   };
 
   const handleLogout = async () => {
-    await fetch('/api/auth/logout', { method: 'POST' });
+    await fetch(`${API_URL}/api/auth/logout`, { method: 'POST', credentials: 'include' });
     router.push('/admin');
   };
 
@@ -109,7 +111,7 @@ export default function AdminPanel() {
         data.append('id', editingProduct._id);
         if (formData.image) data.append('image', formData.image);
 
-        const response = await fetch('/api/products', { method: 'PUT', body: data });
+        const response = await fetch(`${API_URL}/api/products`, { method: 'PUT', credentials: 'include', body: data });
         if (response.ok) {
           setDialogOpen(false);
           fetchProducts();
@@ -121,7 +123,7 @@ export default function AdminPanel() {
         if (!formData.image) { setError('La imagen es obligatoria'); return; }
         data.append('image', formData.image);
 
-        const response = await fetch('/api/products', { method: 'POST', body: data });
+        const response = await fetch(`${API_URL}/api/products`, { method: 'POST', credentials: 'include', body: data });
         if (response.ok) {
           setDialogOpen(false);
           fetchProducts();
@@ -139,7 +141,7 @@ export default function AdminPanel() {
 
   const handleDelete = async (productId: string) => {
     try {
-      const response = await fetch(`/api/products?id=${productId}`, { method: 'DELETE' });
+      const response = await fetch(`${API_URL}/api/products?id=${productId}`, { method: 'DELETE', credentials: 'include' });
       if (response.ok) {
         setDeleteConfirm(null);
         fetchProducts();
